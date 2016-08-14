@@ -1,9 +1,9 @@
 require 'rubygems'
-require 'bundler'
+require 'bundler/setup'
 
-Bundler.require
+Bundler.require(:default, ENV['RACK_ENV'])
 
-Dir.glob('./app/{models,helpers,controllers}/*.rb').each { |file| require file }
+Dir.glob('./app/{models,helpers,controllers}/*.rb').each(&method(:require))
 
 Sinatra::Base.settings.tap do |settings|
   settings.views = 'app/views'
