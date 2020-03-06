@@ -11,3 +11,8 @@ Sinatra MVC application template
 ## Usage
 
     rackup config.ru
+
+
+## License
+
+[BSD-3-Clause](LICENSE)
