@@ -1,13 +1,5 @@
-require 'rubygems'
-require 'bundler/setup'
+# frozen_string_literal: true
 
-Bundler.require(:default, ENV['RACK_ENV'])
-
-Dir.glob('./app/{models,helpers,controllers}/*.rb').each(&method(:require))
-
-Sinatra::Base.settings.tap do |settings|
-  settings.views = 'app/views'
-  settings.public_folder = 'public'
-end
+require './config/boot'
 
 map('/') { run ApplicationController }

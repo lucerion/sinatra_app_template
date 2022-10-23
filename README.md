@@ -10,7 +10,7 @@ Sinatra MVC application template
 
 ## Usage
 
-    rackup config.ru
+    bundle exec rackup config.ru
 
 
 ## License
